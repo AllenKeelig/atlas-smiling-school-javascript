@@ -38,39 +38,39 @@ The Holberton Smiling School web pages were developed by sections using the Boot
 
 ## Homepage
 
-[Homepage Header/Hero Section](https://github.com/jzamora5/holberton-smiling-school/blob/master/0-homepage.html)
+[Homepage Header/Hero Section](https://allenkeelig.github.io/atlas-smiling-school-javascript/0-homepage.html)
 
-[Carousel of quotes](https://github.com/jzamora5/holberton-smiling-school/blob/master/1-homepage.html)
+[Carousel of quotes](https://allenkeelig.github.io/atlas-smiling-school-javascript/1-homepage.html)
 
-[Popular Videos](https://github.com/jzamora5/holberton-smiling-school/blob/master/2-homepage.html)
+[Popular Videos](https://allenkeelig.github.io/atlas-smiling-school-javascript/2-homepage.html)
 
-[Row of smiles](https://github.com/jzamora5/holberton-smiling-school/blob/master/3-homepage.html)
+[Row of smiles](https://allenkeelig.github.io/atlas-smiling-school-javascript/3-homepage.html)
 
-[Latest Videos](https://github.com/jzamora5/holberton-smiling-school/blob/master/4-homepage.html)
+[Latest Videos](https://allenkeelig.github.io/atlas-smiling-school-javascript/4-homepage.html)
 
-[Footer](https://github.com/jzamora5/holberton-smiling-school/blob/master/homepage.html)
+[Footer](https://allenkeelig.github.io/atlas-smiling-school-javascript/homepage.html)
 
 ## Pricing
 
-[Pricing Header](https://github.com/jzamora5/holberton-smiling-school/blob/master/0-pricing.html)
+[Pricing Header](https://allenkeelig.github.io/atlas-smiling-school-javascript/0-pricing.html)
 
-[Prices Grid](https://github.com/jzamora5/holberton-smiling-school/blob/master/1-pricing.html)
+[Prices Grid](https://allenkeelig.github.io/atlas-smiling-school-javascript/1-pricing.html)
 
-[Quotes Section](https://github.com/jzamora5/holberton-smiling-school/blob/master/2-pricing.html)
+[Quotes Section](https://allenkeelig.github.io/atlas-smiling-school-javascript/2-pricing.html)
 
-[FAQ](https://github.com/jzamora5/holberton-smiling-school/blob/master/3-pricing.html)
+[FAQ](https://allenkeelig.github.io/atlas-smiling-school-javascript/3-pricing.html)
 
-[Footer](https://github.com/jzamora5/holberton-smiling-school/blob/master/pricing.html)
+[Footer](https://allenkeelig.github.io/atlas-smiling-school-javascript/pricing.html)
 
 ## Courses
 
-[Courses Header](https://github.com/jzamora5/holberton-smiling-school/blob/master/0-courses.html)
+[Courses Header](https://allenkeelig.github.io/atlas-smiling-school-javascript/0-courses.html)
 
-[Search Filters](https://github.com/jzamora5/holberton-smiling-school/blob/master/1-courses.html)
+[Search Filters](https://allenkeelig.github.io/atlas-smiling-school-javascript/1-courses.html)
 
-[List of Results](https://github.com/jzamora5/holberton-smiling-school/blob/master/2-courses.html)
+[List of Results](https://allenkeelig.github.io/atlas-smiling-school-javascript/2-courses.html)
 
-[Footer](https://github.com/jzamora5/holberton-smiling-school/blob/master/courses.html)
+[Footer](https://allenkeelig.github.io/atlas-smiling-school-javascript/courses.html)
 
 # Author:
 
