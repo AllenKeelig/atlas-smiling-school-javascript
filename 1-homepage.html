@@ -41,6 +41,11 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
+
+    <!--RIGHT FUCKING LIBRARY FOR CAROUSEL SO FUCKIN SLICK-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
   </head>
   <body class="body">
     <header class="header">
@@ -138,15 +143,14 @@
     <main class="main">
       <section class="quotes section d-flex align-items-center">
         <div class="container">
-          <div id="loader" class="loader"></div>
-            <div
-              id="carouselExampleControls"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-            <div class="carousel-inner" id="carousel-quotes"></div>
-            <div class="carousel-item active"></div>
-            <div class="carousel-item"></div>
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="loader"></div>
+            </div>
             <a
               class="carousel-control-prev arrow-left"
               href="#carouselExampleControls"
