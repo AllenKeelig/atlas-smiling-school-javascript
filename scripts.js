@@ -45,11 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector("#carouselExampleControls2 .carousel-inner");
   const loader = document.querySelector(".loader");
-  if (loader) {
-    loader.style.display = "block";
-  } else {
-    alert("error");
-  }
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then((response) => response.json())
   .then((tutorials) => {
@@ -106,6 +101,81 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     });
   });
+  function generateStars(starCount) {
+    let stars = '<div class="d-flex align-items-center">';
+    for (let i = 0; i < 5; i++) {
+      if (i < starCount) {
+        stars += '<img src="images/star_on.png" alt="star on" width="15px" />';
+      } else {
+        stars += '<img src="images/star_off.png" alt="star off" width="15px" />';
+      }
+    }
+    stars += '</div>';
+    return stars;
+  }
+});
+//videos
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselInner = document.querySelector("#carouselExampleControls3 .carousel-inner");
+  const loader = document.querySelector(".loader");
+  fetch("https://smileschool-api.hbtn.info/latest-videos")
+  .then((response) => response.json())
+  .then((videos) => {
+    loader.remove();
+    videos.forEach((video, index) => {
+    const cardHTML = `
+      <div class="carousel-item ${index === 0 ? "active" : ""}">
+        <div class="card">
+          <img src="${video.thumb_url}" class="card-img-top" alt="${video.title} thumbnail" />
+          <div class="card-img-overlay text-center">
+            <img src="images/play.png" alt="Play" width="64px" height="64px" class="play-overlay mx-auto" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">${video.title}</h5>
+            <p class="card-text text-muted">${video["sub-title"]}</p>
+            <div class="creator d-flex align-items-center">
+              <img src="${video.author_pic_url}" alt="${video.author}'s profile" width="30px" class="rounded-circle" />
+              <h6 class="pl-3 m-0 main-color">${video.author}</h6>
+            </div>
+            <div class="info pt-3 d-flex justify-content-between">
+              <div class="rating">${generateStars(video.star)}</div>
+                <span class="main-color">${video.duration}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    console.log("Card HTML:", cardHTML);
+    carouselInner.innerHTML += cardHTML;
+    });
+    $('#carouselExampleControls3 .carousel-inner').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      prevArrow: '.latest-left',
+      nextArrow: '.latest-right',
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+          slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+    console.log("Slick carousel initialized for latest section");
+  })
   function generateStars(starCount) {
     let stars = '<div class="d-flex align-items-center">';
     for (let i = 0; i < 5; i++) {
