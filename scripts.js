@@ -3,9 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector(".carousel-inner");
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then((response) => {
-    
-    alert("Welcome ")
     if (!response.ok) {
+      alert(here);
       throw new Error("Failure to fetch quotes");
     }
     return response.json();
@@ -40,8 +39,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     $('#carouselExampleControls').carousel();
   })
-  .catch((error) => {
-    console.error("Error fetching quotes:", error);
-    loader.innerHTML = "<p class='text-white'>Failed to load quotes.</p>";
-  });
 });
