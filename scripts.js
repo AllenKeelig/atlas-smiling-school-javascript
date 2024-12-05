@@ -131,6 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smileschool-api.hbtn.info/latest-videos")
   .then((response) => response.json())
   .then((tutorials) => {
+    console.log(".loader" = 'block')
     hideLoader()
     tutorials.forEach((tutorial, index) => {
       const cardHTML = `
