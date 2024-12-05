@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smileschool-api.hbtn.info/latest-videos")
   .then((response) => response.json())
   .then((tutorials) => {
-    hideLoader()
     tutorials.forEach((tutorial, index) => {
       const cardHTML = `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
@@ -185,6 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     });
     console.log("Slick carousel initialized for latest section");
+    hideLoader()
   })
   function generateStars(starCount) {
     let stars = '<div class="d-flex align-items-center">';
