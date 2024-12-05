@@ -1,3 +1,12 @@
+//functions
+function showLoader() {
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'block';
+}
+function hideLoader() {
+  const loader = document.querySelector('.loader');
+  loader.style.display = 'none';
+}
 // Quotes
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".loader");
@@ -44,11 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // Tutorials
 document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector("#carouselExampleControls2 .carousel-inner");
-  const loader = document.querySelector(".loader");
+  showLoader()
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then((response) => response.json())
   .then((tutorials) => {
-    loader.remove();
+    hideLoader()
     tutorials.forEach((tutorial, index) => {
       const cardHTML = `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
