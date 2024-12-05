@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
           </div>
       `;
-      carouselInner.appendChild(carouselItem);
+      carouselInner.innerHTML += carouselItem;
   });
   $('#carouselExampleControls2 .carousel-inner').slick({
     slidesToShow: 4,
