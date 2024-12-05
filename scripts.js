@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!response.ok) {
       throw new Error("Failure to fetch quotes");
     }
-    alert(here);
+    alert("here");
     return response.json();
   })
   .then((quotes) => {
     loader.style.display = "none";
-    carousel.style.display = "block";
+    carouselInner.style.display = "block";
     quotes.forEach((quote, index) => {
       const activeClass = index === 0 ? "active" : "";
       const carouselItem = document.createElement("div");
