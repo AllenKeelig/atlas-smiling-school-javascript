@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (loader) {
     loader.style.display = "block";
   } else {
-    console.error("Loader element not found!");
+    alert("error");
   }
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then((response) => response.json())
