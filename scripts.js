@@ -2,7 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".loader");
   const carouselInner = document.querySelector(".carousel-inner");
   fetch("https://smileschool-api.hbtn.info/quotes")
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failure to fetch quotes");
+      }
     .then((quotes) => {
     loader.style.display = "none";
     carousel.style.display = "block";
