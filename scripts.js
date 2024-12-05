@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!response.ok) {
       throw new Error("Failure to fetch quotes");
     }
-    alert("here");
     return response.json();
   })
   .then((quotes) => {
