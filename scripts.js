@@ -9,7 +9,7 @@ function hideLoader() {
 }
 // Quotes
 document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.querySelector(".loader");
+  showLoader()
   const carouselInner = document.querySelector(".carousel-inner");
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then((response) => {
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return response.json();
   })
   .then((quotes) => {
-    loader.style.display = "none";
+    hideLoader()
     carouselInner.style.display = "block";
     quotes.forEach((quote, index) => {
       const activeClass = index === 0 ? "active" : "";
