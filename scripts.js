@@ -3,13 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector(".carousel-inner");
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then((response) => {
+    
+    alert("Welcome ")
     if (!response.ok) {
       throw new Error("Failure to fetch quotes");
     }
     return response.json();
   })
   .then((quotes) => {
-      alert("Welcome ")
     loader.style.display = "none";
     carousel.style.display = "block";
     quotes.forEach((quote, index) => {
