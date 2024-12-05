@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("loader")
-  const carousel = document.getElementById("carouselExampleControls");
-  const carouselInner = document.getElementById("carousel-quotes");
   fetch("https://smileschool-api.hbtn.info/quotes")
     .then((response) => response.json())
     .then((quotes) => {
