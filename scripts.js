@@ -127,10 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //videos
 document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector("#carouselExampleControls3 .carousel-inner");
-  showLoader()
+  const loader = document.querySelector(".loader");
   fetch("https://smileschool-api.hbtn.info/latest-videos")
   .then((response) => response.json())
   .then((tutorials) => {
+    loader.remove();
     tutorials.forEach((tutorial, index) => {
       const cardHTML = `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
@@ -184,7 +185,6 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     });
     console.log("Slick carousel initialized for latest section");
-    hideLoader()
   })
   function generateStars(starCount) {
     let stars = '<div class="d-flex align-items-center">';
