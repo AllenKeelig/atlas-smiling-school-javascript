@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) {
         throw new Error("Failure to fetch quotes");
       }
+      return response.json();
+    })
     .then((quotes) => {
     loader.style.display = "none";
     carousel.style.display = "block";
