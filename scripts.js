@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const carousel = document.getElementById("carouselExampleControls");
-  const carouselInner = document.getElementById("carouselInner");
+  const carouselInner = document.getElementById("carousel-inner");
   const apiURL = "https://smileschool-api.hbtn.info/quotes";
 
   fetch(apiURL)
