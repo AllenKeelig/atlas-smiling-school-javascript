@@ -40,35 +40,6 @@
   opacity: var(0.9);
 }
 
-.loader {
-  border: 10px solid #f3f3f3;
-  border-top: 10px solid #C271FF;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.carousel-inner .carousel-item {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.carousel-item.active {
-  display: block !important;
-}
-@media (max-width: 768px) {
-  .carousel-inner .carousel-item {
-    flex-direction: column;
-  }
-}
-
 /* Header / Hero Styles */
 
 .header {
