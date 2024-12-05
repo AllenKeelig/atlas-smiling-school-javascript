@@ -120,26 +120,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.querySelector(".loader");
   fetch("https://smileschool-api.hbtn.info/latest-videos")
   .then((response) => response.json())
-  .then((videos) => {
+  .then((tutorials) => {
     loader.remove();
-    videos.forEach((video, index) => {
+    tutorials.forEach((tutorial, index) => {
     const cardHTML = `
       <div class="carousel-item ${index === 0 ? "active" : ""}">
         <div class="card">
-          <img src="${video.thumb_url}" class="card-img-top" alt="${video.title} thumbnail" />
+          <img src="${tutorial.thumb_url}" class="card-img-top" alt="${tutorial.title} thumbnail" />
           <div class="card-img-overlay text-center">
             <img src="images/play.png" alt="Play" width="64px" height="64px" class="play-overlay mx-auto" />
           </div>
           <div class="card-body">
-            <h5 class="card-title font-weight-bold">${video.title}</h5>
-            <p class="card-text text-muted">${video["sub-title"]}</p>
+            <h5 class="card-title font-weight-bold">${tutorial.title}</h5>
+            <p class="card-text text-muted">${tutorial["sub-title"]}</p>
             <div class="creator d-flex align-items-center">
-              <img src="${video.author_pic_url}" alt="${video.author}'s profile" width="30px" class="rounded-circle" />
-              <h6 class="pl-3 m-0 main-color">${video.author}</h6>
+              <img src="${tutorial.author_pic_url}" alt="${tutorial.author}'s profile" width="30px" class="rounded-circle" />
+              <h6 class="pl-3 m-0 main-color">${tutorial.author}</h6>
             </div>
             <div class="info pt-3 d-flex justify-content-between">
-              <div class="rating">${generateStars(video.star)}</div>
-                <span class="main-color">${video.duration}</span>
+              <div class="rating">${generateStars(tutorial.star)}</div>
+                <span class="main-color">${tutorial.duration}</span>
               </div>
             </div>
           </div>
