@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then((response) => response.json())
   .then((tutorials) => {
-    loader.style.display = "none";
+    loader.remove();
     tutorials.forEach((tutorial, index) => {
       const cardHTML = `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
@@ -72,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         </div>
         `;
+      console.log("Card HTML:", cardHTML);
       carouselInner.innerHTML += cardHTML;
     });
     $('#carouselExampleControls2 .carousel-inner').slick({
@@ -123,30 +124,30 @@ document.addEventListener("DOMContentLoaded", () => {
   .then((tutorials) => {
     loader.remove();
     tutorials.forEach((tutorial, index) => {
-    const cardHTML = `
-      <div class="carousel-item ${index === 0 ? "active" : ""}">
-        <div class="card">
-          <img src="${tutorial.thumb_url}" class="card-img-top" alt="${tutorial.title} thumbnail" />
-          <div class="card-img-overlay text-center">
-            <img src="images/play.png" alt="Play" width="64px" height="64px" class="play-overlay mx-auto" />
-          </div>
-          <div class="card-body">
-            <h5 class="card-title font-weight-bold">${tutorial.title}</h5>
-            <p class="card-text text-muted">${tutorial["sub-title"]}</p>
-            <div class="creator d-flex align-items-center">
-              <img src="${tutorial.author_pic_url}" alt="${tutorial.author}'s profile" width="30px" class="rounded-circle" />
-              <h6 class="pl-3 m-0 main-color">${tutorial.author}</h6>
+      const cardHTML = `
+        <div class="carousel-item ${index === 0 ? "active" : ""}">
+          <div class="card">
+            <img src="${tutorial.thumb_url}" class="card-img-top" alt="${tutorial.title} thumbnail" />
+            <div class="card-img-overlay text-center">
+              <img src="images/play.png" alt="Play" width="64px" height="64px" class="play-overlay mx-auto" />
             </div>
-            <div class="info pt-3 d-flex justify-content-between">
-              <div class="rating">${generateStars(tutorial.star)}</div>
-                <span class="main-color">${tutorial.duration}</span>
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">${tutorial.title}</h5>
+              <p class="card-text text-muted">${tutorial["sub-title"]}</p>
+              <div class="creator d-flex align-items-center">
+                <img src="${tutorial.author_pic_url}" alt="${tutorial.author}'s profile" width="30px" class="rounded-circle" />
+                <h6 class="pl-3 m-0 main-color">${tutorial.author}</h6>
+              </div>
+              <div class="info pt-3 d-flex justify-content-between">
+                <div class="rating">${generateStars(tutorial.star)}</div>
+                  <span class="main-color">${tutorial.duration}</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      `;
-    console.log("Card HTML:", cardHTML);
-    carouselInner.innerHTML += cardHTML;
+        `;
+      console.log("Card HTML:", cardHTML);
+      carouselInner.innerHTML += cardHTML;
     });
     $('#carouselExampleControls3 .carousel-inner').slick({
       slidesToShow: 4,
