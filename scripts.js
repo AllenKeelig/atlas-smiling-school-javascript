@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
   .then((tutorials) => {
     loader.style.display = "none";
     tutorials.forEach((tutorial, index) => {
-      const carouselItem = `
+      const cardHTML = `
           <div class="carousel-item ${index === 0 ? "active" : ""}">
               <div class="card">
                   <img src="${tutorial.thumb_url}" class="card-img-top" alt="${tutorial.title} thumbnail" />
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
           </div>
       `;
-      carouselInner.innerHTML += carouselItem;
+      carouselInner.innerHTML += cardHTML;
   });
   $('#carouselExampleControls2 .carousel-inner').slick({
     slidesToShow: 4,
