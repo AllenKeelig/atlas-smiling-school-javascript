@@ -127,11 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
 //videos
 document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector("#carouselExampleControls3 .carousel-inner");
-  const loader = document.querySelector(".loader");
+  showLoader()
   fetch("https://smileschool-api.hbtn.info/latest-videos")
   .then((response) => response.json())
   .then((tutorials) => {
-    loader.remove();
+    hideLoader()
     tutorials.forEach((tutorial, index) => {
       const cardHTML = `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
