@@ -45,6 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const carouselInner = document.querySelector("#carouselExampleControls2 .carousel-inner");
   const loader = document.querySelector(".loader");
+  if (loader) {
+    loader.style.display = "block";
+  } else {
+    console.error("Loader element not found!");
+  }
   fetch("https://smileschool-api.hbtn.info/popular-tutorials")
   .then((response) => response.json())
   .then((tutorials) => {
