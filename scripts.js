@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smileschool-api.hbtn.info/quotes")
   .then((response) => {
     if (!response.ok) {
-      alert(here);
       throw new Error("Failure to fetch quotes");
     }
+    alert(here);
     return response.json();
   })
   .then((quotes) => {
