@@ -192,6 +192,7 @@
         fetch("https://smileschool-api.hbtn.info/quotes")
         .then((response) => response.json())
         .then((quotes) => {
+          setTimeout(() => {
           loader.style.display = "none";
           carousel.style.display = "block";
           quotes.forEach((quote, index) => {
@@ -218,6 +219,7 @@
               `;
             carouselInner.appendChild(carouselItem);
           });
+          }, 2000);
           $('#carouselExampleControls').carousel();
         })
         .catch((error) => {
