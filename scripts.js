@@ -36,6 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       carouselInner.appendChild(carouselItem);
     });
-    $('#carouselExampleControls').carouselInner();
+    $('#carouselExampleControls').carousel();
   })
 });
